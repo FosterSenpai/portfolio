@@ -108,6 +108,7 @@ export const StarBackground = () => {
             top: meteor.y + "%",
             animationDelay: meteor.animationDelay + "s",
             animationDuration: meteor.animationDuration + "s",
+            animationFillMode: "backwards",
           }}
         />
       ))}
