@@ -20,7 +20,7 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4">
             I'm a passionate AI & ML engineer currently in the penultimate year
             of my software engineering (AI & Cloud Computing) bachelors from
             Media Design School at Strayer University. My main languages are
