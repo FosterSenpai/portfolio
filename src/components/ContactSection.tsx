@@ -99,6 +99,7 @@ export const ContactSection = () => {
               <h4 className="font-medium mb-4">Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
                 <a
+                  className="text-muted-foreground hover:text-primary transition-colors"
                   href="https://www.linkedin.com/in/fosterrae"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -106,6 +107,7 @@ export const ContactSection = () => {
                   <Linkedin />
                 </a>
                 <a
+                  className="text-muted-foreground hover:text-primary transition-colors"
                   href="https://www.facebook.com/foster.rae.5"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -113,6 +115,7 @@ export const ContactSection = () => {
                   <Facebook />
                 </a>
                 <a
+                  className="text-muted-foreground hover:text-primary transition-colors"
                   href="https://www.instagram.com/fostersenpai"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -120,6 +123,7 @@ export const ContactSection = () => {
                   <Instagram />
                 </a>
                 <a
+                  className="text-muted-foreground hover:text-primary transition-colors"
                   href="https://x.com/"
                   target="_blank"
                   rel="noopener noreferrer"
