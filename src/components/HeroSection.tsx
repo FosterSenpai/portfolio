@@ -1,6 +1,21 @@
+import { cn } from "@/lib/utils";
 import { ArrowDown } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export const HeroSection = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > window.innerHeight / 2);
+    };
+
+    // Scroll listener
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section
       id="hero"
@@ -41,7 +56,12 @@ export const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+      <div
+        className={cn(
+          "absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce transition-opacity duration-300",
+          isScrolled ? "opacity-0" : "opacity-100",
+        )}
+      >
         <span className="text-sm text-muted-foreground mb-2">Scroll</span>
         <ArrowDown className="h-5 w-5 text-primary" />
       </div>
