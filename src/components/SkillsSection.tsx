@@ -19,15 +19,15 @@ const skills = [
   { name: "REST APIs", level: 70, category: "backend" },
   { name: "Node.js", level: 15, category: "backend" },
 
-  // ML
-  { name: "PyTorch", level: 85, category: "ml" },
-  { name: "HuggingFace", level: 80, category: "ml" },
-  { name: "NumPy / Pandas", level: 85, category: "ml" },
-  { name: "Matplotlib / Seaborn", level: 90, category: "ml" },
-  { name: "OpenCV", level: 80, category: "ml" },
-  { name: "CUDA / GPU", level: 75, category: "ml" },
-  { name: "Weights & Biases", level: 50, category: "ml" },
-  { name: "Jupyter Notebooks", level: 85, category: "ml" },
+  // ML / AI
+  { name: "PyTorch", level: 85, category: "ml / ai" },
+  { name: "HuggingFace", level: 80, category: "ml / ai" },
+  { name: "NumPy / Pandas", level: 85, category: "ml / ai" },
+  { name: "Matplotlib / Seaborn", level: 90, category: "ml / ai" },
+  { name: "OpenCV", level: 80, category: "ml / ai" },
+  { name: "CUDA / GPU", level: 75, category: "ml / ai" },
+  { name: "Weights & Biases", level: 50, category: "ml / ai" },
+  { name: "Jupyter Notebooks", level: 85, category: "ml / ai" },
 
   // Robotics
   { name: "Isaac Sim / Lab", level: 70, category: "robotics" },
@@ -57,7 +57,7 @@ const categories = [
   "all",
   "frontend",
   "backend",
-  "ml",
+  "ml / ai",
   "robotics",
   "graphics",
   "tools",
