@@ -50,7 +50,7 @@ export const ProjectsSection = () => {
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
           Here are some of the projects I've worked on, showcasing my skills in
-          AI, machine learning, and software development.
+          robotics, machine learning, and software development.
         </p>
 
         {/* Projects Grid */}
