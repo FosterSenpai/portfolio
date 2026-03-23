@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { act, useState } from "react";
+import { useState } from "react";
 
 // Skills List
 const skills = [
