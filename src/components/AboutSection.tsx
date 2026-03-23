@@ -16,16 +16,19 @@ export const AboutSection = () => {
               Passionate AI & ML Engineer
             </h3>
             <p className="text-muted-foreground">
-              I have almost completed my software engineering (AI & Cloud
-              Computing) bachelors from Media Design School at Strayer
-              University. I have completed the instep internship at InfoSys
-              bangalore travelling internationally to work on robotics policies.
+              I am in the final year of my Software Engineering (AI & Cloud
+              Computing) degree at Media Design School, Strayer University.
+              During my studies I completed the Infosys InStep internship in
+              Bangalore, travelling internationally to contribute to robotics
+              policy research. I have attended various hackathons and have
+              enjoyed applying my skills to many external projects.
             </p>
 
             <p className="text-muted-foreground">
-              I am passionate about machine learning, robotics, computer vision,
-              embedded systems and have a fondness for cellular automata and
-              procedural generation.
+              My passion lies in machine learning, computer vision, robotics and
+              embedded systems. I have a particular fondness for emergent
+              behaviour, from cellular automata and procedural generation to
+              physical AI and simulation.
             </p>
 
             {/* Info Buttons */}
@@ -53,8 +56,9 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Machine Learning</h4>
                   <p className="text-muted-foreground">
-                    Developing and deploying machine learning models for various
-                    applications
+                    Designing, training and deploying machine learning models
+                    across computer vision, NLP and reinforcement learning
+                    applications.
                   </p>
                 </div>
               </div>
@@ -67,8 +71,9 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Robotics</h4>
                   <p className="text-muted-foreground">
-                    Post training physical intelligence's pi0 policy and
-                    robotics simulations using NVIDIA isaac sim and lab
+                    Post-training Physical Intelligence's π0 policy for
+                    specialized robotics, with simulation work in NVIDIA Isaac
+                    Sim and Isaac Lab.
                   </p>
                 </div>
               </div>
@@ -83,8 +88,9 @@ export const AboutSection = () => {
                     Internship Experience
                   </h4>
                   <p className="text-muted-foreground">
-                    Gained hands-on experience at InfoSys Bangalore, working on
-                    robotics policies and international projects.
+                    Completed the Infosys InStep internship in Bangalore, one of
+                    a small number of international students selected
+                    contributing to robotics policy development on-site.
                   </p>
                 </div>
               </div>
