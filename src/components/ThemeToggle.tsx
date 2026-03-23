@@ -50,11 +50,11 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       className={cn(
         "fixed hidden md:block right-5 z-50 p-2 rounded-full transition-all duration-300 focus:outline-hidden",
-        isScrolled ? "top-3" : "top-5",
+        isScrolled ? "top-2" : "top-4",
       )}
     >
       {isDarkMode ? (
-        <Sun className="h-6 w-6 text-yellow-300" />
+        <Sun className="h-6 w-6 text-white" />
       ) : (
         <Moon className="h-6 w-6 text-blue-900" />
       )}{" "}
