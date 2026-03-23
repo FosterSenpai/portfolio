@@ -10,24 +10,24 @@ const skills = [
   { name: "CSS", level: 40, category: "frontend" },
 
   // Backend
-  { name: "Python", level: 90, category: "backend" },
+  { name: "Python", level: 90, category: "backend", best: true },
   { name: "SQL", level: 75, category: "backend" },
   { name: "Linux / Bash", level: 70, category: "backend" },
-  { name: "C++", level: 75, category: "backend" },
-  { name: "Arduino", level: 70, category: "backend" },
+  { name: "C++", level: 75, category: "backend", best: true },
+  { name: "Arduino", level: 70, category: "backend", best: true },
   { name: "FastAPI / Flask", level: 65, category: "backend" },
-  { name: "REST APIs", level: 70, category: "backend" },
+  { name: "REST APIs", level: 70, category: "backend", best: true },
   { name: "Node.js", level: 15, category: "backend" },
 
   // ML / AI
-  { name: "PyTorch", level: 85, category: "ml / ai" },
-  { name: "HuggingFace", level: 80, category: "ml / ai" },
-  { name: "NumPy / Pandas", level: 85, category: "ml / ai" },
-  { name: "Matplotlib / Seaborn", level: 90, category: "ml / ai" },
-  { name: "OpenCV", level: 80, category: "ml / ai" },
-  { name: "CUDA / GPU", level: 75, category: "ml / ai" },
+  { name: "PyTorch", level: 85, category: "ml / ai", best: true },
+  { name: "HuggingFace", level: 80, category: "ml / ai", best: true },
+  { name: "NumPy / Pandas", level: 85, category: "ml / ai", best: true },
+  { name: "Matplotlib / Seaborn", level: 90, category: "ml / ai", best: true },
+  { name: "OpenCV", level: 80, category: "ml / ai", best: true },
+  { name: "CUDA / GPU", level: 75, category: "ml / ai", best: true },
   { name: "Weights & Biases", level: 50, category: "ml / ai" },
-  { name: "Jupyter Notebooks", level: 85, category: "ml / ai" },
+  { name: "Jupyter Notebooks", level: 85, category: "ml / ai", best: true },
 
   // Robotics
   { name: "Isaac Sim / Lab", level: 70, category: "robotics" },
@@ -43,7 +43,7 @@ const skills = [
   { name: "SFML", level: 70, category: "graphics" },
 
   // Tools
-  { name: "Git / GitHub", level: 85, category: "tools" },
+  { name: "Git / GitHub", level: 85, category: "tools", best: true },
   { name: "Figma", level: 75, category: "tools" },
   { name: "Jira", level: 60, category: "tools" },
   { name: "Docker", level: 40, category: "tools" },
@@ -54,7 +54,7 @@ const skills = [
 ];
 
 const categories = [
-  "all",
+  "best",
   "frontend",
   "backend",
   "ml / ai",
@@ -66,11 +66,11 @@ const categories = [
 
 export const SkillsSection = () => {
   // State for active category filter
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("best");
 
   // Filter skills based on active category
-  const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory,
+  const filteredSkills = skills.filter((skill) =>
+    activeCategory === "best" ? skill.best : skill.category === activeCategory,
   );
 
   return (
