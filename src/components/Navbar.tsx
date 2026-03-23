@@ -18,7 +18,7 @@ export const Navbar = () => {
   // Pin navbar on scroll
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     // Scroll listener
