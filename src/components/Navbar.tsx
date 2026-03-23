@@ -28,12 +28,25 @@ export const Navbar = () => {
     };
   }, []);
 
+  const [showScrolledStyle, setShowScrolledStyle] = useState(false);
+
+  // Delay switch to scrolled style when menu is closed to prevent jarring effect
+  useEffect(() => {
+    if (!isMenuOpen) {
+      const timer = setTimeout(() => setShowScrolledStyle(isScrolled), 220);
+      return () => clearTimeout(timer);
+    } else {
+      setShowScrolledStyle(false);
+    }
+  }, [isMenuOpen, isScrolled]);
+
   return (
     // Navbar
     <nav
       className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled
+        "fixed w-full z-40",
+        !isMenuOpen && "transition-all duration-300",
+        showScrolledStyle
           ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
           : "py-5",
       )}
