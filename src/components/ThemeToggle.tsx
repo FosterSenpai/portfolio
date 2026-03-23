@@ -4,7 +4,7 @@ import { cn } from "../lib/utils";
 
 export const ThemeToggle = () => {
   // Dark/Light state
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   // Use effects run right after the component mounts
   useEffect(() => {
@@ -17,6 +17,17 @@ export const ThemeToggle = () => {
       document.documentElement.classList.remove("dark");
     }
   }, []); // Only run once on mount
+
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Toggle function
   const toggleTheme = () => {
@@ -36,8 +47,8 @@ export const ThemeToggle = () => {
     <button
       onClick={toggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outline-hidden",
+        "fixed hidden md:block right-5 z-50 p-2 rounded-full transition-all duration-300 focus:outline-hidden",
+        isScrolled ? "top-3" : "top-5",
       )}
     >
       {isDarkMode ? (
