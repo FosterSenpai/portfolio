@@ -21,36 +21,44 @@ export const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20"
     >
-      <div className="container max-w-4xl mx-auto text-center z-10">
-        <div className="space-y-7">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in">Hi, I'm</span>
-            <span className=" text-primary opacity-0 animate-fade-in-delay-1">
-              {" "}
-              Foster
-            </span>
-            <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-              {" "}
-              Rae
-            </span>
-          </h1>
+      <div className="container max-w-4xl mx-auto z-10">
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+          {/* Profile Image */}
+          <div className="opacity-0 animate-fade-in shrink-0">
+            <img
+              src="/headshot.jpg"
+              alt="Foster Rae"
+              className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-4 border-primary shadow-lg"
+            />
+          </div>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto opacity-0 animate-fade-in-delay-4">
-            I'm a passionate AI & ML engineer currently in the penultimate year
-            of my software engineering (AI & Cloud Computing) bachelors from
-            Media Design School at Strayer University. My main languages are
-            Python, C++ and SQL and I have heavy experience with machine
-            learning models and frameworks such as PyTorch, TensorFlow and
-            Hugging Face. I have completed an internship at InfoSys working on
-            robotics policies and have a strong background in deep learning,
-            computer vision and natural language processing.
-          </p>
+          {/* Text */}
+          <div className="space-y-7 text-center md:text-left">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+              <span className="opacity-0 animate-fade-in">Hi, I'm</span>
+              <span className="text-primary opacity-0 animate-fade-in-delay-1">
+                {" "}
+                Foster
+              </span>
+              <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
+                {" "}
+                Rae
+              </span>
+            </h1>
 
-          {/* Projects Button */}
-          <div className="pt-4 opacity-0 animate-fade-in-delay-long">
-            <a href="#projects" className="cosmic-button">
-              View My Work
-            </a>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl opacity-0 animate-fade-in-delay-4">
+              AI & ML engineer specialising in machine learning, computer vision
+              and robotics. Currently in my final year of my Software
+              Engineering (AI & Cloud Computing) degree at Media Design School,
+              Strayer University.
+            </p>
+
+            {/* Projects Button */}
+            <div className="pt-4 opacity-0 animate-fade-in-delay-long">
+              <a href="#projects" className="cosmic-button">
+                View My Work
+              </a>
+            </div>
           </div>
         </div>
       </div>
